@@ -19,13 +19,19 @@
     <br>
     Tuoi <input type="text" name = "txtTuoi">
     <br>
+    <br>
+    Picture
+    <input type="text" name "picture">
+
     <input type="submit" value="insert">
     </form>
     
     <ul>
         {{#each data}}
         <li>{{name}} -- {{tuoi}}
+            <img src="{{picture}}" width="150" height="100"/>
             <a href="/delete?id={{_id}}">Delete</a>
+            <a href="/edit?id={{_id}}">Edit</a>
         </li>
         {{/each}}
     </ul>
